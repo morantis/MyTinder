@@ -1,0 +1,125 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Main"
+    android:background="#536DFE">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:textColorHint="#E6F4EA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:singleLine="true"
+                android:backgroundTint="#ffffff"
+                android:textColor="#ffffff"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/activity_chooser_view_content"
+            android:textColorHint="#E6F4EA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_password"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <EditText
+                android:id="@+id/loaction_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Location"
+                android:singleLine="true"
+                android:backgroundTint="#ffffff"
+                android:textColor="#ffffff"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/activity_name"
+            android:textColorHint="#E6F4EA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_chooser_view_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <EditText
+                android:id="@+id/activity_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Activity"
+                android:singleLine="true"
+                android:backgroundTint="#ffffff"
+                android:textColor="#ffffff"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_name"
+            android:layout_marginTop="50dp"
+            android:id="@+id/linearLayout">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:id="@+id/imageView2"
+                android:layout_gravity="center_horizontal"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFFFFF"
+                android:src="@drawable/smile" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join"
+                android:id="@+id/join_button"
+                android:background="#29D58F"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="By clicking Join you agree to adhere to our Terms of Service &amp; Privacy Policy"
+                android:id="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#fff9f9"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center_horizontal"
+                android:textSize="10dp" />
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_name"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</FrameLayout>

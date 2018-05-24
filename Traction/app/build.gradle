@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "bagga.com.traction"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    apply plugin: 'com.google.gms.google-services'
+
+
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.google.firebase:firebase-core:9.0.2'
+    compile 'com.google.firebase:firebase-auth:9.0.2'
+    compile 'com.google.firebase:firebase-database:9.0.2'
+    compile 'com.google.android.gms:play-services:9.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.mlsdev.rximagepicker:library:1.1.7'
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.google.firebase:firebase-storage:9.0.2'
+    compile 'com.lorentzos.swipecards:library:1.0.9'
+    compile 'com.firebase:geofire:1.1.0'
+    compile 'com.firebase:firebase-client-android:2.5.2'
+    compile 'com.minimize.library:seekbar-compat:0.2.5'
+}

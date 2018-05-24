@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/global_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageCard"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="fitXY"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"    tools:src="@drawable/ic_cast_dark"
+        android:layout_marginTop="70dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageCard"
+        android:layout_alignLeft="@+id/imageCard"
+        android:layout_alignStart="@+id/imageCard"
+        android:layout_alignRight="@+id/imageCard"
+        android:background="@drawable/border_colour"
+        android:layout_alignEnd="@+id/imageCard">
+
+        <TextView
+            android:id="@+id/titleCard"
+            style="@android:style/TextAppearance.Large.Inverse"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Title"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@android:style/TextAppearance.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/titleCard"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="#000000"
+            tools:text="This is the description, it is a long description, as you can see"
+            android:text="sasasda"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

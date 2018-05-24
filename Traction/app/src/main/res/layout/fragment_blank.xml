@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Fragments.BlankFragment">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F1F1">
+
+        <com.lorentzos.flingswipe.SwipeFlingAdapterView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rotation_degrees="16"
+            app:max_visible="4"
+            android:id="@+id/frame"
+            app:min_adapter_stack="6" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@android:drawable/ic_delete"
+            android:background="@color/colorPrimary"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_marginRight="44dp"
+            android:layout_marginBottom="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="44dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/star"
+            android:background="#ffffff"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_alignTop="@+id/heart"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="51dp"
+            android:layout_marginStart="51dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/heart"
+            android:background="@color/colorPrimary"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_alignBottom="@+id/fab"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Liked"
+            android:id="@+id/like"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/fab"
+            android:layout_alignEnd="@+id/fab"
+            android:layout_marginTop="147dp"
+            android:layout_gravity="center"
+            android:rotation="15"
+            android:textColor="#28D28E"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Nope"
+            android:id="@+id/nope"
+            android:layout_gravity="center"
+            android:rotation="-15"
+            android:textColor="#FF4564"
+            android:layout_alignTop="@+id/like"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

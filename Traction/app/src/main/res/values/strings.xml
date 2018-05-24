@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Traction</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hiny_name">Username</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="server_client_id">72888468934-rct1ehv1gki3aaqeu1baqn9i0qdokmon.apps.googleusercontent.com</string>
+</resources>
